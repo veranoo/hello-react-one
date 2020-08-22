@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Post } from '../interfaces/Post';
 import { useQuery } from 'react-query';
 import { Spin } from 'antd';
@@ -24,7 +24,7 @@ export const Posts: React.FC = ({ children }) => {
         })}
       </ol>
 
-      {children}
+      <Outlet />
     </Spin>
   );
 };

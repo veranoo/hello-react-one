@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { PageProps } from '@shared';
+import { Link, Outlet } from 'react-router-dom';
+import { Layout } from '@shared';
 
-export const Dashboard: React.FC<PageProps> = ({ children, history }) => {
+export const Dashboard: React.FC = ({ children }) => {
   return (
-    <>
+    <Layout>
       <div>Dashboard</div>
       <ul>
         <li>
@@ -14,7 +14,7 @@ export const Dashboard: React.FC<PageProps> = ({ children, history }) => {
           <Link to='/dashboard/photos'>Photos</Link>
         </li>
       </ul>
-      {children}
-    </>
+      <Outlet />
+    </Layout>
   );
 };

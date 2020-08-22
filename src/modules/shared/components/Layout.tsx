@@ -5,10 +5,10 @@ import Logo from '../../../assets/logo.svg';
 export const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <img width={100} src={Logo} alt=""/>
+      <img width={100} src={Logo} alt='' />
       <ul>
         <li>
-          <Link to='/home'>Home</Link>
+          <Link to='/'>Home</Link>
         </li>
         <li>
           <Link to='/about'>About</Link>

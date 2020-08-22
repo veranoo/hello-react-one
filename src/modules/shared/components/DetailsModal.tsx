@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Modal } from 'antd';
-import { PageProps } from '../interfaces/PageProps';
+import { useNavigate } from 'react-router-dom';
 
-export const DetailsModal: React.FC<PageProps<{ input: React.FC }>> = ({
-  data,
-  ...rest
-}) => {
+export const DetailsModal: React.FC = ({ children }) => {
   const [visible, setVisible] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     return () => {
@@ -15,10 +13,8 @@ export const DetailsModal: React.FC<PageProps<{ input: React.FC }>> = ({
   }, []);
 
   return (
-    <Modal onCancel={() => rest.history.goBack()} visible={visible}>
-      {data?.input({
-        ...rest
-      })}
+    <Modal onCancel={() => navigate(-1)} visible={visible}>
+      {children}
     </Modal>
   );
 };

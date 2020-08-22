@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "antd": "^4.5.2",
+    "browserslist": "^4.14.0",
     "customize-cra": "^1.0.0",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
     "react-query": "^2.5.13",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^6.0.0-beta.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -35,7 +36,6 @@
   "devDependencies": {
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.5",
     "prettier": "^2.0.5",
     "react-dev-utils": "^10.2.1",
     "react-scripts": "^3.4.1",

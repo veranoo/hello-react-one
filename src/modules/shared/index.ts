@@ -1,6 +1,4 @@
 export * from './components/DetailsModal'
 export * from './components/Layout'
-export * from './components/RecursiveRoutes'
-export * from './interfaces/PageProps'
 export * from './interfaces/RecursiveRoute'
 export * from './request'

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { PageProps, request } from '@shared';
+import { Link, Outlet } from 'react-router-dom';
+import { request } from '@shared';
 import { Photo } from '@dashboard';
 import { useQuery } from 'react-query';
 import { Spin } from 'antd';
 
-export const Photos: React.FC<PageProps> = ({ children }) => {
+export const Photos: React.FC = ({ children }) => {
   const { data: photos, isFetching } = useQuery(
     'PHOTOS',
     () => {
@@ -29,7 +29,7 @@ export const Photos: React.FC<PageProps> = ({ children }) => {
         })}
       </ol>
 
-      {children}
+      <Outlet />
     </Spin>
   );
 };
